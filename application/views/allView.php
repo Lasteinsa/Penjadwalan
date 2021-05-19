@@ -4,6 +4,11 @@ include 'header.php';
 
 <head>
     <title>Show</title>
+    <style>
+        a {
+            text-decoration: none;
+        }
+    </style>
 </head>
 
 <body>
@@ -41,6 +46,9 @@ include 'header.php';
                 <td><?php echo $q->fakultas; ?></td>
                 <td><?php echo $q->tempat; ?></td>
                 <td><?php echo $q->keterangan; ?></td>
+                <td><a href="delete/<?= $q->kodemtk; ?>" class="badge bg-danger"> Delete </a>
+                    <a href="edit/<?= $q->kodemtk; ?>" class="badge bg-warning"> Edit </a>
+                </td>
             </tr>
         <?php } ?>
     </table>
