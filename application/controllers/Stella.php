@@ -43,6 +43,11 @@ class Stella extends CI_Controller
         // $data['query'] = $this->penjadwalan->uShows();
         $this->load->view('showView', $data);
     }
+    function delete($kodemtk)
+    {
+        $this->penjadwalan->delete($kodemtk);
+        redirect('all');
+    }
 
     // Just sample
     public function world()

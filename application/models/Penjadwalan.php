@@ -58,4 +58,8 @@ class Penjadwalan extends CI_Model
     {
         return $this->db->get('matakuliah')->num_rows();
     }
+    public function delete($id)
+    {
+        return $this->db->delete('matakuliah', array('kodemtk' => $id));
+    }
 }
