@@ -46,10 +46,12 @@ class Penjadwalan extends CI_Model
     }
     public function uShows($number, $offset)
     {
+        setlocale(LC_TIME, 'id_ID', 'Indonesian_indonesia', 'Indonesia');
+        $hari       = strftime('%A');
         $fakultas   = $this->input->post('fakultas');
         $tempat     = $this->input->post('tempat');
 
-        $query = $this->db->get_Where('matakuliah', array('fakultas' => $fakultas, 'tempat' => $tempat), $number, $offset)->result();
+        $query = $this->db->get_Where('matakuliah', array('fakultas' => $fakultas, 'tempat' => $tempat, 'hari' => $hari), $number, $offset)->result();
         return $query;
     }
     function jumlah_data()
