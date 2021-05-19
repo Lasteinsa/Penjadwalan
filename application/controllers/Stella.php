@@ -56,7 +56,7 @@ class Stella extends CI_Controller
     function edit($kodemtk)
     {
         $data['jadwal'] = $this->penjadwalan->getById($kodemtk);
-        $this->load->view('siswa/edit', $data);
+        $this->load->view('editView', $data);
     }
 
     // Just sample, Ignore!

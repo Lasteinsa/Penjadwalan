@@ -64,6 +64,6 @@ class Penjadwalan extends CI_Model
     }
     public function getById($id)
     {
-        return $this->db->get_where($this->table, ['kodemtk' => $id])->row();
+        return $this->db->get_where('matakuliah', ['kodemtk' => $id])->row();
     }
 }

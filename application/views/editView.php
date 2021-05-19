@@ -32,7 +32,7 @@ include 'header.php';
             </div>
             <div class="form-group">
                 <label>Kelompok</label>
-                <input type="text" class="form-control" placeholder="AB" name="kelas" value="<?= $jadwal->kelompok; ?>" required autocomplete="off">
+                <input type="text" class="form-control" placeholder="AB" name="kelas" value="<?= $jadwal->kelas; ?>" required autocomplete="off">
             </div>
             <div class="form-group">
                 <label class="form-label">Hari</label>
