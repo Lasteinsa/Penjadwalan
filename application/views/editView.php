@@ -9,41 +9,41 @@ include 'header.php';
 <body>
     <div class="ml-5 mt-5 mb-5">
         <center>
-            <h2>Masukkan Jadwal Kuliah</h2>
+            <h2>Edit Jadwal Kuliah</h2>
             <hr style="color: blue; width: 80%;">
             <br>
         </center>
-        <form method="POST" action="/Stella/uAdd" class="border border-primary rounded px-5 py-5 mx-auto" style="width: 50%;">
+        <form method="POST" action="/Stella/update" class="border border-primary rounded px-5 py-5 mx-auto" style="width: 50%;">
             <div class="form-group">
                 <label>Kode Matakuliah</label>
-                <input type="text" class="form-control" placeholder="KP01" name="kodemtk" required autocomplete="off">
+                <input type="text" class="form-control" placeholder="KP01" name="kodemtk" value="<?= $jadwal->kodemtk; ?>" required autocomplete="off">
             </div>
             <div class="form-group">
                 <label>Nama Matakuliah</label>
-                <input type="text" class="form-control" placeholder="Pemrograman Web" name="namamtk" required autocomplete="off">
+                <input type="text" class="form-control" placeholder="Pemrograman Web" name="namamtk" value="<?= $jadwal->namamtk; ?>" required autocomplete="off">
             </div>
             <div class="form-group">
                 <label>Nama Dosen</label>
-                <input type="text" class="form-control" placeholder="Einsa Rosasineinsa" name="namadosen" required autocomplete="off">
+                <input type="text" class="form-control" placeholder="Einsa Rosasineinsa" name="namadosen" value="<?= $jadwal->namadosen; ?>" required autocomplete="off">
             </div>
             <div class="form-group">
                 <label>Ruang</label>
-                <input type="text" class="form-control" placeholder="7.3.2" name="ruang" required autocomplete="off">
+                <input type="text" class="form-control" placeholder="7.3.2" name="ruang" value="<?= $jadwal->ruang; ?>" required autocomplete="off">
             </div>
             <div class="form-group">
                 <label>Kelompok</label>
-                <input type="text" class="form-control" placeholder="AB" name="kelas" required autocomplete="off">
+                <input type="text" class="form-control" placeholder="AB" name="kelas" value="<?= $jadwal->kelompok; ?>" required autocomplete="off">
             </div>
             <div class="form-group">
                 <label class="form-label">Hari</label>
                 <select class="required form-select" name="hari" required>
-                    <option value="Senin">Senin</option>
-                    <option value="Selasa">Selasa</option>
-                    <option value="Rabu">Rabu</option>
-                    <option value="Kamis">Kamis</option>
-                    <option value="Jumat">Jumat</option>
-                    <option value="Sabtu">Sabtu</option>
-                    <option value="Minggu">Minggu</option>
+                    <option value="Senin" <?php echo ($jadwal->hari ? 'Senin' : 'selected'); ?>>Senin</option>
+                    <option value="Selasa" <?php echo ($jadwal->hari ? 'Selasa' : 'selected'); ?>>Selasa</option>
+                    <option value="Rabu" <?php echo ($jadwal->hari ? 'Rabu' : 'selected'); ?>>Rabu</option>
+                    <option value="Kamis" <?php echo ($jadwal->hari ? 'Kamis' : 'selected'); ?>>Kamis</option>
+                    <option value="Jumat" <?php echo ($jadwal->hari ? 'Jumat' : 'selected'); ?>>Jumat</option>
+                    <option value="Sabtu" <?php echo ($jadwal->hari ? 'Sabtu' : 'selected'); ?>>Sabtu</option>
+                    <option value="Minggu" <?php echo ($jadwal->hari ? 'Minggu' : 'selected'); ?>>Minggu</option>
                 </select>
             </div>
             <div class="form-group">

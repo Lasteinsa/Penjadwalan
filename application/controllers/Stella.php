@@ -31,7 +31,7 @@ class Stella extends CI_Controller
         $this->penjadwalan->uAdd();
         redirect(base_url('insert'));
     }
-
+    // Function to show Schedules
     public function uShow()
     {
         $jumlah_data = $this->penjadwalan->jumlah_data();
@@ -46,10 +46,17 @@ class Stella extends CI_Controller
         // $data['query'] = $this->penjadwalan->uShows();
         $this->load->view('showView', $data);
     }
+    // Function to delete data
     function delete($kodemtk)
     {
         $this->penjadwalan->delete($kodemtk);
         redirect('all');
+    }
+    // Function to show Edit Page
+    function edit($kodemtk)
+    {
+        $data['jadwal'] = $this->penjadwalan->getById($kodemtk);
+        $this->load->view('siswa/edit', $data);
     }
 
     // Just sample, Ignore!
