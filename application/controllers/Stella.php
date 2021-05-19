@@ -14,15 +14,18 @@ class Stella extends CI_Controller
     {
         $this->load->view('startView');
     }
+    // Function to show All Data and Page
     public function all()
     {
         $data['matakulias'] = $this->penjadwalan->get_all();
         $this->load->view('allView', $data);
     }
+    // Function to show Insert Page
     public function uInsert()
     {
         $this->load->view('insertView');
     }
+    // Function to Insert Data
     public function uAdd()
     {
         $this->penjadwalan->uAdd();
@@ -49,7 +52,7 @@ class Stella extends CI_Controller
         redirect('all');
     }
 
-    // Just sample
+    // Just sample, Ignore!
     public function world()
     {
         $this->load->view('start');
