@@ -1,6 +1,6 @@
 <?php
 defined('BASEPATH') or exit('No direct script access allowed');
-
+setlocale(LC_TIME, 'id_ID', 'Indonesian_indonesia', 'Indonesia');
 ?>
 <html>
 

@@ -15,7 +15,7 @@ include 'header.php';
     <div class="ml-5 mt-5 mb-5">
         <center>
             <h2>Jadwal Kuliah Universitas Budi Luhur</h2>
-            <?= date("D d M Y"); ?>
+            <?= strftime('%A, %d %B %G'); ?>
             <hr style="color: blue; width: 80%;">
         </center>
         <br>

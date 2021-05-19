@@ -10,8 +10,7 @@ include 'header.php';
     <div class="ml-5 mt-5 mb-5">
         <center>
             <h2>Jadwal Kuliah Universitas Budi Luhur</h2>
-            <p>Pada Hari <?php setlocale(LC_TIME, 'id_ID');
-                            echo strftime('%A'); ?> </p>
+            <p>Pada Hari <?php echo strftime('%A'); ?> </p>
             <hr style="color: blue; width: 80%;">
         </center>
     </div>
