@@ -26,6 +26,7 @@ include 'header.php';
             <td>Fakultas</td>
             <td>Tempat</td>
             <td>Keterangan</td>
+            <td>Action</td>
         </tr>
         <?php foreach ($matakulias as $q) { ?>
             <tr>
