@@ -48,35 +48,35 @@ include 'header.php';
             </div>
             <div class="form-group">
                 <label>Mulai</label>
-                <input type="time" class="form-control" placeholder="" name="mulai" required autocomplete="off">
+                <input type="time" class="form-control" placeholder="" name="mulai" value="<?= $jadwal->mulai; ?>" required autocomplete="off">
             </div>
             <div class="form-group">
                 <label>Selesai</label>
-                <input type="time" class="form-control" placeholder="" name="selesai" required autocomplete="off">
+                <input type="time" class="form-control" placeholder="" name="selesai" value="<?= $jadwal->selesai; ?>" required autocomplete="off">
             </div>
             <div class="form-group">
                 <label class="form-label">Fakultas</label>
                 <select class="required form-select" name="fakultas" required>
-                    <option value="FTI">Fakultas Teknologi Informasi</option>
-                    <option value="AS">Akademi Sekretari</option>
-                    <option value="FEB">Fakultas Ekonomi dan Bisnis</option>
-                    <option value="FISIP">Fakultas Ilmu Sosial dan Ilmu Politik</option>
-                    <option value="FT">Fakultas Teknik</option>
-                    <option value="FIKOM">Fakultas Ilmu Komunikasi</option>
+                    <option value="FTI" <?php echo ($jadwal->fakultas ? 'FTI' : 'selected'); ?>>Fakultas Teknologi Informasi</option>
+                    <option value="AS" <?php echo ($jadwal->fakultas ? 'AS' : 'selected'); ?>>Akademi Sekretari</option>
+                    <option value="FEB" <?php echo ($jadwal->fakultas ? 'FEB' : 'selected'); ?>>Fakultas Ekonomi dan Bisnis</option>
+                    <option value="FISIP" <?php echo ($jadwal->fakultas ? 'FISIP' : 'selected'); ?>>Fakultas Ilmu Sosial dan Ilmu Politik</option>
+                    <option value="FT" <?php echo ($jadwal->fakultas ? 'FT' : 'selected'); ?>>Fakultas Teknik</option>
+                    <option value="FIKOM" <?php echo ($jadwal->fakultas ? 'FIKOM' : 'selected'); ?>>Fakultas Ilmu Komunikasi</option>
                 </select>
             </div>
             <div class="form-group">
                 <label class="form-label">Lokasi</label>
                 <select class="required form-select" name="tempat" required>
-                    <option value="Reguler Pusat">Regular Pusat</option>
-                    <option value="Karyawan Pusat">Karyawan Pusat</option>
-                    <option value="Roxy">Roxy</option>
-                    <option value="Salemba">Salemba</option>
+                    <option value="Reguler Pusat" <?php echo ($jadwal->tempat ? 'Regular Pusat' : 'selected'); ?>>Regular Pusat</option>
+                    <option value="Karyawan Pusat" <?php echo ($jadwal->tempat ? 'Karyawan Pusat' : 'selected'); ?>>Karyawan Pusat</option>
+                    <option value="Roxy" <?php echo ($jadwal->tempat ? 'Roxy' : 'selected'); ?>>Roxy</option>
+                    <option value="Salemba" <?php echo ($jadwal->tempat ? 'Salemba' : 'selected'); ?>>Salemba</option>
                 </select>
             </div>
             <div class="form-group">
                 <label>Keterangan</label>
-                <textarea type="text" class="form-control" placeholder="Kelas Pengganti" name="keterangan" required autocomplete="off"></textarea>
+                <textarea type="text" class="form-control" placeholder="Kelas Pengganti" name="keterangan" required autocomplete="off"><?= $jadwal->keterangan; ?></textarea>
             </div>
             <button type="submit" class="btn btn-primary" style="min-width: 50px;">Submit</button>
         </form>
