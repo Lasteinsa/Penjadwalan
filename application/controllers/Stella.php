@@ -47,16 +47,33 @@ class Stella extends CI_Controller
         $this->load->view('showView', $data);
     }
     // Function to delete data
-    function delete($kodemtk)
+    public function delete($kodemtk)
     {
         $this->penjadwalan->delete($kodemtk);
         redirect('all');
     }
     // Function to show Edit Page
-    function edit($kodemtk)
+    public function edit($kodemtk)
     {
         $data['jadwal'] = $this->penjadwalan->getById($kodemtk);
         $this->load->view('editView', $data);
+    }
+    // Function to update data
+    public function update()
+    {
+        $kodemtk                = $this->input->post('kodemtk');
+        $data['namamtk']        = $this->input->post('namamtk');
+        $data['namadosen']      = $this->input->post('namadosen');
+        $data['ruang']          = $this->input->post('ruang');
+        $data['kelas']          = $this->input->post('kelas');
+        $data['hari']           = $this->input->post('hari');
+        $data['mulai']          = $this->input->post('mulai');
+        $data['selesai']        = $this->input->post('selesai');
+        $data['fakultas']       = $this->input->post('fakultas');
+        $data['tempat']         = $this->input->post('tempat');
+        $data['keterangan']     = $this->input->post('keterangan');
+        $this->penjadwalan->update($data, $kodemtk);
+        redirect('all');
     }
 
     // Just sample, Ignore!

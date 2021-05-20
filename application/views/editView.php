@@ -78,7 +78,7 @@ include 'header.php';
                 <label>Keterangan</label>
                 <textarea type="text" class="form-control" placeholder="Kelas Pengganti" name="keterangan" required autocomplete="off"><?= $jadwal->keterangan; ?></textarea>
             </div>
-            <button type="submit" class="btn btn-primary" style="min-width: 50px;">Submit</button>
+            <button type="submit" class="btn btn-warning" style="min-width: 50px;">Update</button>
         </form>
     </div>
 </body>

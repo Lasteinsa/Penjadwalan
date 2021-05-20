@@ -66,4 +66,8 @@ class Penjadwalan extends CI_Model
     {
         return $this->db->get_where('matakuliah', ['kodemtk' => $id])->row();
     }
+    public function update($data, $id)
+    {
+        return $this->db->update('matakuliah', $data, array('kodemtk' => $id));
+    }
 }
