@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 19, 2021 at 09:49 AM
+-- Generation Time: May 20, 2021 at 03:24 PM
 -- Server version: 10.4.17-MariaDB
 -- PHP Version: 7.4.15
 
@@ -46,7 +46,7 @@ CREATE TABLE `matakuliah` (
 --
 
 INSERT INTO `matakuliah` (`kodemtk`, `namamtk`, `namadosen`, `ruang`, `kelas`, `hari`, `mulai`, `selesai`, `fakultas`, `tempat`, `keterangan`) VALUES
-('KP01', 'Pemrograman Web', 'Einsa Rosasineinsa', '8.2.1', 'AB', 'Senin', '07:59:00', '20:19:00', 'FTI', 'Reguler Pusat', '-');
+('KP02', 'Pemrograman Java ', 'Hibiscus', '8.1.1', 'AA', 'Senin', '05:00:00', '08:00:00', 'FTI', 'Reguler Pusat', 'Kelas Mainan\r\n');
 
 --
 -- Indexes for dumped tables
