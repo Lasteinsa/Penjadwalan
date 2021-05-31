@@ -46,7 +46,7 @@ include 'header.php';
                 <td><?php echo $q->fakultas; ?></td>
                 <td><?php echo $q->tempat; ?></td>
                 <td><?php echo $q->keterangan; ?></td>
-                <td><a href="stella/delete/<?= $q->kodemtk; ?>" class="badge bg-danger"> Delete </a>
+                <td><a href="stella/delete/<?= $q->kodemtk; ?>" class="badge bg-danger" onclick="return confirm('Delete?')"> Delete </a>
                     <a href="stella/edit/<?= $q->kodemtk; ?>" class="badge bg-warning"> Edit </a>
                 </td>
             </tr>

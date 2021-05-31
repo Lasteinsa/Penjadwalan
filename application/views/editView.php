@@ -16,7 +16,7 @@ include 'header.php';
         <form method="POST" action="/Stella/update" class="border border-primary rounded px-5 py-5 mx-auto" style="width: 50%;">
             <div class="form-group">
                 <label>Kode Matakuliah</label>
-                <input type="text" class="form-control" placeholder="KP01" name="kodemtk" value="<?= $jadwal->kodemtk; ?>" required autocomplete="off">
+                <input readonly type="text" class="form-control" placeholder="KP01" name="kodemtk" value="<?= $jadwal->kodemtk; ?>" required autocomplete="off">
             </div>
             <div class="form-group">
                 <label>Nama Matakuliah</label>
